@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me?</title>
+</head>
+<body>
+    <h2><b>Do you love me?</b></h2>
+    <button onclick = "inform()">yes</button>
+    <input type="button" id='no' value="no" onmouseover="move()">
+</body>
+</html>
+<script>
+    let obj = null
+    obj = document.getElementById('no');
+
+    window.onload = init;
+    function inform(){
+        alert('<3');
+    }
+    function init(){
+        obj.style.position = 'relative';
+        obj.style.left= '0';
+        obj.style.top = '0';
+
+    }
+    function move(){
+        obj.style.left = parseInt(obj.style.left) + (Math.random()-0.5)*200 +'px';
+        obj.style.top = parseInt(obj.style.top) + (Math.random()-0.5)*200 + 'px';
+    }
+</script>
